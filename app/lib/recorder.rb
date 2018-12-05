@@ -11,16 +11,13 @@ class Recorder
 
     # #ルート設定
     root_json = request.get["list"][0]
-
-      weather = Weather.new(
-        city_name:  city_name,
-        rain:       rain_check,
-        snow:       snow_check,
-        wind_deg:   wind_deg,
-        wind_speed: wind_speed
-      )
-
-      weather.save
+    Weather.create(
+      city_name:  city_name,
+      rain:       rain_check,
+      snow:       snow_check,
+      wind_deg:   wind_deg,
+      wind_speed: wind_speed
+    )
   end
 
   define_method :wind_speed do
@@ -28,18 +25,18 @@ class Recorder
   end
 
   define_method :wind_deg do
-    get_direction(root_json["wind"]["deg"])
+    direction(root_json["wind"]["deg"])
   end
 
   define_method :rain_check do
-    get_stat(root_json["rain"])
+    felled?(root_json["rain"])
   end
 
   define_method :snow_check do
-    get_stat(root_json["snow"])
+    felled?(root_json["snow"])
   end
 
-  def get_direction(direction_no)
+  def direction(direction_no)
     case direction_no
       when 0..39 then wind_deg = "北"
       when 40..89 then wind_deg = "北東"
@@ -52,7 +49,7 @@ class Recorder
     end
   end
 
-  def get_stat(check_target)
+  def felled?(check_target)
     if check_target.nil?
       return true
     else
@@ -60,23 +57,27 @@ class Recorder
     end
   end
 
-  def get_today_weather(eva_wind)
+  def today_weather
     delay_date = []
     weather_hash = {}
     count = 0
     url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{ENV['OPEN_WEATHER_APIKEY']}"
+
+    eva_wind = Weather.average(:wind_speed).to_f
     request = Request.new(url)
 
     json = request.get['list']
-    json[0].each do |list|
-      if eva_wind <= json[count]['wind']['speed'] then
-        delay_date.push(json[count]['dt_txt'].gsub(" ","."))
-      end
-      count = count + 1
-    end
 
-    noti = Notifycation.new
-    noti.line_notify(delay_date)
+    json.each do |list|
+      if eva_wind <= list['wind']['speed'] then
+        delay_date.push(list['dt_txt'])
+      end
+    end
+    puts delay_date
+
+  # TODO:DBに保村してある平均値と比較するとこまで終わったので、あとはLineで通知
+  #   noti = Notifycation.new
+  #   noti.line_notify(delay_date)
   end
 
 end
