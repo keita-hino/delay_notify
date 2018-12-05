@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rain: false
+  snow: false
+  wind_deg: MyText
+  wind_speed: 
+
+two:
+  rain: false
+  snow: false
+  wind_deg: MyText
+  wind_speed: 
