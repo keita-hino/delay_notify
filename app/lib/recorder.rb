@@ -57,27 +57,47 @@ class Recorder
     end
   end
 
-  def today_weather
+  def weather_avg
     delay_date = []
-    weather_hash = {}
-    count = 0
-    url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{ENV['OPEN_WEATHER_APIKEY']}"
-
     eva_wind = Weather.average(:wind_speed).to_f
-    request = Request.new(url)
 
-    json = request.get['list']
-
-    json.each do |list|
+    weather_today.each do |list|
       if eva_wind <= list['wind']['speed'] then
         delay_date.push(list['dt_txt'])
       end
     end
-    puts delay_date
+  end
+
+  def weather_today
+    weather_hash = {}
+    url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{ENV['OPEN_WEATHER_APIKEY']}"
+    request = Request.new(url)
+    request.get['list']
+  end
 
   # TODO:DBに保村してある平均値と比較するとこまで終わったので、あとはLineで通知
-  #   noti = Notifycation.new
+    # noti = Notifycation.new
   #   noti.line_notify(delay_date)
-  end
+
+  # weather_avg = Log.average(:Wind_Speed)
+  # evaluation = Evaluation.new(
+  #   Wind_Avg:weather_avg.round(2),
+  #   Create_Date:Date.today
+  # )
+  # evaluation.save
+  # eva_wind =  Evaluation.select("Wind_Avg").last.Wind_Avg
+  #
+  # CITY_NAME = 'Ishinomaki'
+  # weather = Weather.new(
+  #   CITY_NAME
+  # )
+  #   delay_time = weather.get_today_weather(eva_wind)
+  #
+  #   system_log.info("通知処理終了")
+  #   puts "#{Date.today}:通知処理完了"
+  #
+  #   puts "処理時間計測#{Time.now-time}"
+
+
 
 end
