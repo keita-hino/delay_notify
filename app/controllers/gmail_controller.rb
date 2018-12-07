@@ -7,7 +7,7 @@ class GmailController < ApplicationController
   end
 
   def notify
-    recorder = Recorder.new(CITY_NAME)
-    recorder.today_weather
+    noti = Notifycation.new
+    noti.line_notify(CITY_NAME)
   end
 end
