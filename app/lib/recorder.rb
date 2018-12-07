@@ -6,7 +6,7 @@ class Recorder
   end
 
   define_method :insert_weather_log do
-    url = "http://api.openweathermap.org/data/2.5/find?q=#{city_name},jp&units=metric&APPID=#{ENV['OPEN_WEATHER_APIKEY']}"
+    url = "http://api.openweathermap.org/data/2.5/find?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
     request = Request.new(url)
 
     # #ルート設定
@@ -18,6 +18,10 @@ class Recorder
       wind_deg:   wind_deg,
       wind_speed: wind_speed
     )
+  end
+
+  def open_weather_key
+    ENV['OPEN_WEATHER_APIKEY']
   end
 
   define_method :wind_speed do
@@ -57,27 +61,24 @@ class Recorder
     end
   end
 
-  def weather_avg
+  def threshold_over_list
     delay_date = []
-    eva_wind = Weather.average(:wind_speed).to_f
+    eva_wind = Weather.average(:wind_speed).to_f.round(2)
 
     weather_today.each do |list|
       if eva_wind <= list['wind']['speed'] then
         delay_date.push(list['dt_txt'])
       end
     end
+    return delay_date
   end
 
   def weather_today
     weather_hash = {}
-    url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{ENV['OPEN_WEATHER_APIKEY']}"
+    url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
     request = Request.new(url)
     request.get['list']
   end
-
-  # TODO:DBに保村してある平均値と比較するとこまで終わったので、あとはLineで通知
-    # noti = Notifycation.new
-  #   noti.line_notify(delay_date)
 
   # weather_avg = Log.average(:Wind_Speed)
   # evaluation = Evaluation.new(
