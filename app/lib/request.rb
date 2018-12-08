@@ -11,12 +11,11 @@ class Request
       JSON.parse(json)
     rescue
       puts "not connect"
-      # exit
     end
   end
 
   def post(authorization,message)
-    uri = URI.parse("https://notify-api.line.me/api/notify")
+    uri = URI.parse(url)
     request = Net::HTTP::Post.new(uri)
     request["Authorization"] = authorization
     request.set_form_data(
