@@ -18,25 +18,24 @@ class Notifycation
   end
 
   def message(city_name)
-    message = []
-    message << "\n本日、下記の時間帯にJRが遅延する恐れがあります\n"
+    message  = "\n本日、下記の時間帯にJRが遅延する恐れがあります\n"
     recorder = Recorder.new(city_name)
     eva_wind = recorder.wind_speed_average
 
     recorder.weather_today.each do |list|
       if eva_wind <= list['wind']['speed'] then
-        message.push(list['dt_txt'] + "\n")
+        message << list['dt_txt'] + "\n"
       end
     end
-    return message.join
+    return message
   end
 
   def line_accsess_key
-    line_accsess_key = ENV['LINE_NOTIFY_KEY']
+    ENV['LINE_NOTIFY_KEY']
   end
 
   def line_endpoint
-    url = "https://notify-api.line.me/api/notify"
+    "https://notify-api.line.me/api/notify"
   end
 
   def slack_endpoint
