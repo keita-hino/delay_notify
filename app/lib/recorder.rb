@@ -18,6 +18,11 @@ class Recorder
       wind_deg:   wind_deg,
       wind_speed: wind_speed
     )
+    threshold_modify
+  end
+
+  def threshold_modify
+    Threshold.create(wind_speed:wind_speed_average)
   end
 
   def open_weather_key
@@ -63,7 +68,7 @@ class Recorder
 
   def threshold_over_list
     delay_date = []
-    eva_wind = Weather.average(:wind_speed).to_f.round(2)
+    eva_wind = wind_speed_average
 
     weather_today.each do |list|
       if eva_wind <= list['wind']['speed'] then
@@ -80,25 +85,8 @@ class Recorder
     request.get['list']
   end
 
-  # weather_avg = Log.average(:Wind_Speed)
-  # evaluation = Evaluation.new(
-  #   Wind_Avg:weather_avg.round(2),
-  #   Create_Date:Date.today
-  # )
-  # evaluation.save
-  # eva_wind =  Evaluation.select("Wind_Avg").last.Wind_Avg
-  #
-  # CITY_NAME = 'Ishinomaki'
-  # weather = Weather.new(
-  #   CITY_NAME
-  # )
-  #   delay_time = weather.get_today_weather(eva_wind)
-  #
-  #   system_log.info("通知処理終了")
-  #   puts "#{Date.today}:通知処理完了"
-  #
-  #   puts "処理時間計測#{Time.now-time}"
-
-
+  def wind_speed_average
+    Weather.average(:wind_speed).to_f.round(2)
+  end
 
 end
