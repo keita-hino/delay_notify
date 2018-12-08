@@ -66,18 +66,6 @@ class Recorder
     end
   end
 
-  def threshold_over_list
-    delay_date = []
-    eva_wind = wind_speed_average
-
-    weather_today.each do |list|
-      if eva_wind <= list['wind']['speed'] then
-        delay_date.push(list['dt_txt'])
-      end
-    end
-    return delay_date
-  end
-
   def weather_today
     weather_hash = {}
     url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
@@ -86,7 +74,7 @@ class Recorder
   end
 
   def wind_speed_average
-    Weather.average(:wind_speed).to_f.round(2)
+    Weather.where(city_name:city_name).average(:wind_speed).to_f.round(2)
   end
 
 end
