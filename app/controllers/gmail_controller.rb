@@ -9,5 +9,6 @@ class GmailController < ApplicationController
   def notify
     noti = Notifycation.new
     noti.line_notify(CITY_NAME)
+    noti.slack_notify(CITY_NAME)
   end
 end
