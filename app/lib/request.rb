@@ -1,3 +1,5 @@
+require 'http'
+require 'json'
 require 'net/http'
 class Request
   attr_accessor :url
@@ -14,7 +16,7 @@ class Request
     end
   end
 
-  def post(authorization,message)
+  def post(message,authorization)
     uri = URI.parse(url)
     request = Net::HTTP::Post.new(uri)
     request["Authorization"] = authorization
@@ -29,5 +31,9 @@ class Request
     response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
       http.request(request)
     end
+  end
+
+  def slack_post(**param)
+    response = HTTP.post(url, params:param)
   end
 end
