@@ -18,11 +18,17 @@ class Recorder
       wind_deg:   wind_deg,
       wind_speed: wind_speed
     )
+    # 閾値を変更
     threshold_modify
+
   end
 
   def threshold_modify
-    Threshold.create(wind_speed:wind_speed_average)
+    wind_speed = Weather.wind_speed_average(city_name,wind_speed)
+    Threshold.create(
+      wind_speed:wind_speed,
+      city_name:city_name
+    )
   end
 
   def open_weather_key
@@ -67,14 +73,9 @@ class Recorder
   end
 
   def weather_today
-    weather_hash = {}
     url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
     request = Request.new(url)
     request.get['list']
-  end
-
-  def wind_speed_average
-    Weather.where(city_name:city_name).average(:wind_speed).to_f.round(2)
   end
 
 end
