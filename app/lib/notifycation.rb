@@ -20,7 +20,7 @@ class Notifycation
   def message(city_name)
     message  = "\n本日、下記の時間帯にJRが遅延する恐れがあります\n"
     recorder = Recorder.new(city_name)
-    eva_wind = recorder.wind_speed_average
+    eva_wind = Threshold.threshold_latest(city_name)
 
     recorder.weather_today.each do |list|
       if eva_wind <= list['wind']['speed'] then
