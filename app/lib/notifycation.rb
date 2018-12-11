@@ -18,7 +18,7 @@ class Notifycation
   end
 
   def message(city_name)
-    message  = "\n本日、下記の時間帯にJRが遅延する恐れがあります\n"
+    message  = "\n本日から5日間の範囲で、下記の時間帯にJRが遅延する恐れがあります\n"
     recorder = Recorder.new(city_name)
     eva_wind = Threshold.threshold_latest(city_name)
 
