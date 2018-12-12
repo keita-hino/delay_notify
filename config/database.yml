@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: DelayNotifify_production
-  username: DelayNotifify
-  password: <%= ENV['DELAYNOTIFIFY_DATABASE_PASSWORD'] %>
