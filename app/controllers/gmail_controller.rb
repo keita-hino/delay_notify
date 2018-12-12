@@ -8,7 +8,13 @@ class GmailController < ApplicationController
 
   def notify
     noti = Notifycation.new
-    noti.line_notify(CITY_NAME)
+    pid = fork do
+      noti.line_notify(CITY_NAME)
+    end
+
+    # 子プロセスの終了ステータス情報解放
+    Process.detach(pid)
+
     noti.slack_notify(CITY_NAME)
   end
 end
