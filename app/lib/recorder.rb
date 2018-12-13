@@ -11,6 +11,7 @@ class Recorder
 
     # #ルート設定
     root_json = request.get["list"][0]
+    puts "●#{request.get["list"][0]}"
     Weather.create(
       city_name:  city_name,
       rain:       rain_check,
@@ -64,11 +65,11 @@ class Recorder
     end
   end
 
-  def felled?(check_target)
+  def falled?(check_target)
     if check_target.nil?
-      return true
-    else
       return false
+    else
+      return true
     end
   end
 
