@@ -6,12 +6,8 @@ class Recorder
   end
 
   define_method :insert_weather_log do
-    url = "http://api.openweathermap.org/data/2.5/find?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
-    request = Request.new(url)
-
-    # #ルート設定
-    root_json = request.get["list"][0]
-    puts "●#{request.get["list"][0]}"
+    #ルート設定
+    root_json = current_weather
     Weather.create(
       city_name:  city_name,
       rain:       rain_check,
@@ -22,6 +18,12 @@ class Recorder
     # 閾値を変更
     threshold_modify
 
+  end
+
+  def current_weather
+    url = "http://api.openweathermap.org/data/2.5/find?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
+    request = Request.new(url)
+    return request.get["list"][0]
   end
 
   def threshold_modify
@@ -45,11 +47,11 @@ class Recorder
   end
 
   define_method :rain_check do
-    felled?(root_json["rain"])
+    falled?(root_json["rain"])
   end
 
   define_method :snow_check do
-    felled?(root_json["snow"])
+    falled?(root_json["snow"])
   end
 
   def direction(direction_no)
