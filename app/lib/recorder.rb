@@ -27,7 +27,7 @@ class Recorder
   end
 
   def threshold_modify
-    wind_speed = Weather.wind_speed_average(city_name,wind_speed)
+    wind_speed = Weather.wind_speed_average(city_name)
     Threshold.create(
       wind_speed:wind_speed,
       city_name:city_name
