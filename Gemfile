@@ -54,6 +54,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # テスト用
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :test do
