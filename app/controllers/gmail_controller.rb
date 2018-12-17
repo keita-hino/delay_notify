@@ -4,6 +4,7 @@ class GmailController < ApplicationController
   def callback
     recorder = Recorder.new(CITY_NAME)
     recorder.insert_weather_log
+    head 200
   end
 
   def notify
@@ -16,5 +17,6 @@ class GmailController < ApplicationController
     Process.detach(pid)
 
     noti.slack_notify(CITY_NAME)
+    head 200
   end
 end
