@@ -1,3 +1,5 @@
+# [![Build Status](https://travis-ci.org/keita-hino/delay_notify.svg?branch=master)](https://travis-ci.org/keita-hino/delay_notify)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
