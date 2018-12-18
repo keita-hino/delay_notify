@@ -13,7 +13,6 @@ describe Recorder do
     it "return false" do
       expect(@recorder.falled?(nil)).to eq(false)
     end
-
   end
   context 'direction convert' do
     it 'return north' do
