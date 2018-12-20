@@ -20,6 +20,7 @@ RSpec.configure do |config|
     c.hook_into :webmock # or :fakeweb
     c.filter_sensitive_data('<SLACK_BOT_OAUTH>') { ENV['SLACK_BOT_OAUTH'] }
     c.filter_sensitive_data('<LINE_NOTIFY_KEY>') { ENV['LINE_NOTIFY_KEY'] }
+    c.filter_sensitive_data('<OPEN_WEATHER_APIKEY>') { ENV['OPEN_WEATHER_APIKEY'] }
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups

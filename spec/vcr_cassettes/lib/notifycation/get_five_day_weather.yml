@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric
+    uri: http://api.openweathermap.org/data/2.5/forecast?APPID=<OPEN_WEATHER_APIKEY>&q=ishinomaki,jp&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric"
+      - "/data/2.5/forecast?APPID=<OPEN_WEATHER_APIKEY>&q=ishinomaki,jp&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -115,6 +115,6 @@ http_interactions:
         18:00:00"},{"dt":1545685200,"main":{"temp":3.92,"temp_min":3.92,"temp_max":3.92,"pressure":1036.69,"sea_level":1039.1,"grnd_level":1036.69,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":6.82,"deg":297.501},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
         21:00:00"}],"city":{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"country":"JP","population":117233}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 20 Dec 2018 07:27:24 GMT
 recorded_with: VCR 4.0.0

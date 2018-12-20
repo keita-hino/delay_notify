@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric
+    uri: http://api.openweathermap.org/data/2.5/forecast?APPID=<OPEN_WEATHER_APIKEY>&q=ishinomaki,jp&units=metric
     body:
       encoding: US-ASCII
       string: ''
@@ -31,7 +31,7 @@ http_interactions:
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric"
+      - "/data/2.5/forecast?APPID=<OPEN_WEATHER_APIKEY>&q=ishinomaki,jp&units=metric"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
