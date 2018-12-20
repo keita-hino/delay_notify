@@ -119,7 +119,7 @@ http_interactions:
   recorded_at: Thu, 20 Dec 2018 07:34:59 GMT
 - request:
     method: post
-    uri: https://slack.com/api/chat.postMessage?as_user=true&channel=%23train-info&text=%0A%E6%9C%AC%E6%97%A5%E3%81%8B%E3%82%895%E6%97%A5%E9%96%93%E3%81%AE%E7%AF%84%E5%9B%B2%E3%81%A7%E3%80%81%E4%B8%8B%E8%A8%98%E3%81%AE%E6%99%82%E9%96%93%E5%B8%AF%E3%81%ABJR%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B%E6%81%90%E3%82%8C%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%0A2018-12-24%2006:00:00%0A&token=xoxp-275797983783-274646633731-499043996885-423b7b91c3c0bccd1254add9ccab5fb3
+    uri: https://slack.com/api/chat.postMessage?as_user=true&channel=%23train-info&text=%0A%E6%9C%AC%E6%97%A5%E3%81%8B%E3%82%895%E6%97%A5%E9%96%93%E3%81%AE%E7%AF%84%E5%9B%B2%E3%81%A7%E3%80%81%E4%B8%8B%E8%A8%98%E3%81%AE%E6%99%82%E9%96%93%E5%B8%AF%E3%81%ABJR%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B%E6%81%90%E3%82%8C%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%0A2018-12-24%2006:00:00%0A&token=<SLACK_BOT_OAUTH>
     body:
       encoding: UTF-8
       string: ''
