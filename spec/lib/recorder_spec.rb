@@ -5,6 +5,22 @@ describe Recorder do
     @recorder = Recorder.new("ishinomaki")
   end
 
+  describe 'current_weather' do
+    it 'is current weather date result correct' do
+      VCR.use_cassette("lib/get_current_weather") do
+        expect(@recorder.current_weather).to have_key("id")
+      end
+    end
+  end
+
+  describe 'five_day_weather' do
+    it 'is weather date result correct' do
+      VCR.use_cassette("lib/get_five_day_weather") do
+        expect(@recorder.five_day_weather[0]).to have_key("dt")
+      end
+    end
+  end
+
   describe 'return boolean' do
     it "return true" do
       expect(@recorder.falled?(true)).to eq(true)
