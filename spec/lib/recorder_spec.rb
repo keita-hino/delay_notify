@@ -5,7 +5,7 @@ describe Recorder do
 
   describe '.current_weather' do
     it 'is current weather date result correct' do
-      VCR.use_cassette("lib/get_current_weather") do
+      VCR.use_cassette("lib/recorder/get_current_weather") do
         expect(recorder.current_weather).to have_key("id")
       end
     end
@@ -13,7 +13,7 @@ describe Recorder do
 
   describe '.five_day_weather' do
     it 'is weather date result correct' do
-      VCR.use_cassette("lib/get_five_day_weather") do
+      VCR.use_cassette("lib/recorder/get_five_day_weather") do
         expect(recorder.five_day_weather[0]).to have_key("dt")
       end
     end

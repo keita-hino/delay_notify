@@ -10,8 +10,24 @@ describe Notifycation do
 
   describe '.create_message' do
     it 'is create message correct' do
-      VCR.use_cassette("lib/get_five_day_weather") do
+      VCR.use_cassette("lib/notifycation/get_five_day_weather") do
         expect(notifycation.create_message('ishinomaki')).to eq(message)
+      end
+    end
+  end
+
+  describe '.line_notify' do
+    it 'is notify on line correct' do
+      VCR.use_cassette("lib/notifycation/post_line_notify") do
+        expect(notifycation.line_notify('ishinomaki').code).to eq("200")
+      end
+    end
+  end
+
+  describe '.slack_notify' do
+    it 'is notify on slack correct' do
+      VCR.use_cassette("lib/notifycation/post_slack_notify") do
+        expect(notifycation.slack_notify('ishinomaki').code).to eq(200)
       end
     end
   end
