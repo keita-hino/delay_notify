@@ -115,7 +115,7 @@ http_interactions:
         18:00:00"},{"dt":1545685200,"main":{"temp":3.92,"temp_min":3.92,"temp_max":3.92,"pressure":1036.69,"sea_level":1039.1,"grnd_level":1036.69,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":6.82,"deg":297.501},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
         21:00:00"}],"city":{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"country":"JP","population":117233}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 20 Dec 2018 07:34:59 GMT
 - request:
     method: post
@@ -181,6 +181,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"ok":true,"channel":"CEQ78HX70","ts":"1545291300.000200","message":{"bot_id":"BENKVKWS0","type":"message","text":"\n\u672c\u65e5\u304b\u30895\u65e5\u9593\u306e\u7bc4\u56f2\u3067\u3001\u4e0b\u8a18\u306e\u6642\u9593\u5e2f\u306bJR\u304c\u9045\u5ef6\u3059\u308b\u6050\u308c\u304c\u3042\u308a\u307e\u3059\n2018-12-24
         06:00:00\n","user":"U82K0JMMH","ts":"1545291300.000200"}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 20 Dec 2018 07:35:00 GMT
 recorded_with: VCR 4.0.0
