@@ -75,7 +75,7 @@ class Recorder
     end
   end
 
-  def weather_today
+  def five_day_weather
     url = "http://api.openweathermap.org/data/2.5/forecast?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
     request = Request.new(url)
     request.get['list']

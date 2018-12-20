@@ -27,7 +27,7 @@ class Notifycation
     eva_wind = Threshold.threshold_latest(city_name)
     count = 0
 
-    recorder.weather_today.each do |list|
+    recorder.five_day_weather.each do |list|
       if eva_wind <= list['wind']['speed'] then
         message << list['dt_txt'] + "\n"
         count += 1
