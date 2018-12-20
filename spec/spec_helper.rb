@@ -1,3 +1,4 @@
+require 'vcr'
 require 'factory_bot'
 
 RSpec.configure do |config|
@@ -11,6 +12,12 @@ RSpec.configure do |config|
 
   config.before(:all) do
     FactoryBot.reload
+  end
+
+  VCR.configure do |c|
+    c.cassette_library_dir = 'spec/vcr_cassettes'
+    c.allow_http_connections_when_no_cassette = true  #VCRブロック外のHTTP通信は許可する
+    c.hook_into :webmock # or :fakeweb
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
