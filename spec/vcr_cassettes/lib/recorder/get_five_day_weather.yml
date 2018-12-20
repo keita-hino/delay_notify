@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Thu, 20 Dec 2018 04:47:34 GMT
+      - Thu, 20 Dec 2018 07:27:25 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '13597'
+      - '13250'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -40,15 +40,13 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"cod":"200","message":0.0057,"cnt":38,"list":[{"dt":1545285600,"main":{"temp":9.92,"temp_min":8.66,"temp_max":9.92,"pressure":1030.13,"sea_level":1032.46,"grnd_level":1030.13,"humidity":100,"temp_kf":1.26},"weather":[{"id":800,"main":"Clear","description":"clear
-        sky","icon":"02d"}],"clouds":{"all":8},"wind":{"speed":9.31,"deg":293.501},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-20
-        06:00:00"},{"dt":1545296400,"main":{"temp":8.66,"temp_min":7.71,"temp_max":8.66,"pressure":1031.9,"sea_level":1034.27,"grnd_level":1031.9,"humidity":100,"temp_kf":0.95},"weather":[{"id":800,"main":"Clear","description":"clear
+      string: '{"cod":"200","message":0.004,"cnt":37,"list":[{"dt":1545296400,"main":{"temp":6.38,"temp_min":6.38,"temp_max":7.71,"pressure":1031.9,"sea_level":1034.27,"grnd_level":1031.9,"humidity":100,"temp_kf":-1.33},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":9.01,"deg":295.003},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
-        09:00:00"},{"dt":1545307200,"main":{"temp":7.6,"temp_min":6.97,"temp_max":7.6,"pressure":1032.85,"sea_level":1035.21,"grnd_level":1032.85,"humidity":100,"temp_kf":0.63},"weather":[{"id":800,"main":"Clear","description":"clear
+        09:00:00"},{"dt":1545307200,"main":{"temp":5.98,"temp_min":5.98,"temp_max":6.97,"pressure":1032.85,"sea_level":1035.21,"grnd_level":1032.85,"humidity":100,"temp_kf":-1},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":8.37,"deg":298.004},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
-        12:00:00"},{"dt":1545318000,"main":{"temp":7.01,"temp_min":6.7,"temp_max":7.01,"pressure":1033.81,"sea_level":1036.22,"grnd_level":1033.81,"humidity":100,"temp_kf":0.32},"weather":[{"id":800,"main":"Clear","description":"clear
+        12:00:00"},{"dt":1545318000,"main":{"temp":6.03,"temp_min":6.03,"temp_max":6.7,"pressure":1033.81,"sea_level":1036.22,"grnd_level":1033.81,"humidity":100,"temp_kf":-0.66},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.91,"deg":302.5},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
-        15:00:00"},{"dt":1545328800,"main":{"temp":6.58,"temp_min":6.58,"temp_max":6.58,"pressure":1035.11,"sea_level":1037.43,"grnd_level":1035.11,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        15:00:00"},{"dt":1545328800,"main":{"temp":6.24,"temp_min":6.24,"temp_max":6.58,"pressure":1035.11,"sea_level":1037.43,"grnd_level":1035.11,"humidity":100,"temp_kf":-0.33},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.52,"deg":305.005},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
         18:00:00"},{"dt":1545339600,"main":{"temp":6.53,"temp_min":6.53,"temp_max":6.53,"pressure":1036.33,"sea_level":1038.65,"grnd_level":1036.33,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.32,"deg":305.003},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
@@ -118,5 +116,5 @@ http_interactions:
         sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":6.82,"deg":297.501},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
         21:00:00"}],"city":{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"country":"JP","population":117233}}'
     http_version: 
-  recorded_at: Thu, 20 Dec 2018 04:47:35 GMT
+  recorded_at: Thu, 20 Dec 2018 07:27:25 GMT
 recorded_with: VCR 4.0.0

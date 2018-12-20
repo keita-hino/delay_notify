@@ -1,0 +1,171 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openweathermap.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Thu, 20 Dec 2018 07:27:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '13250'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/forecast?APPID=a8fe10ee1619eadb53849afee0eb18cc&q=ishinomaki,jp&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"cod":"200","message":0.004,"cnt":37,"list":[{"dt":1545296400,"main":{"temp":6.38,"temp_min":6.38,"temp_max":7.71,"pressure":1031.9,"sea_level":1034.27,"grnd_level":1031.9,"humidity":100,"temp_kf":-1.33},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":9.01,"deg":295.003},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
+        09:00:00"},{"dt":1545307200,"main":{"temp":5.98,"temp_min":5.98,"temp_max":6.97,"pressure":1032.85,"sea_level":1035.21,"grnd_level":1032.85,"humidity":100,"temp_kf":-1},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":8.37,"deg":298.004},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
+        12:00:00"},{"dt":1545318000,"main":{"temp":6.03,"temp_min":6.03,"temp_max":6.7,"pressure":1033.81,"sea_level":1036.22,"grnd_level":1033.81,"humidity":100,"temp_kf":-0.66},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.91,"deg":302.5},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
+        15:00:00"},{"dt":1545328800,"main":{"temp":6.24,"temp_min":6.24,"temp_max":6.58,"pressure":1035.11,"sea_level":1037.43,"grnd_level":1035.11,"humidity":100,"temp_kf":-0.33},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.52,"deg":305.005},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
+        18:00:00"},{"dt":1545339600,"main":{"temp":6.53,"temp_min":6.53,"temp_max":6.53,"pressure":1036.33,"sea_level":1038.65,"grnd_level":1036.33,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.32,"deg":305.003},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-20
+        21:00:00"},{"dt":1545350400,"main":{"temp":7.47,"temp_min":7.47,"temp_max":7.47,"pressure":1037.62,"sea_level":1039.92,"grnd_level":1037.62,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":{"all":0},"wind":{"speed":6.86,"deg":304.002},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-21
+        00:00:00"},{"dt":1545361200,"main":{"temp":8.85,"temp_min":8.85,"temp_max":8.85,"pressure":1035.89,"sea_level":1038.14,"grnd_level":1035.89,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":{"all":0},"wind":{"speed":5.67,"deg":300.503},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-21
+        03:00:00"},{"dt":1545372000,"main":{"temp":9.97,"temp_min":9.97,"temp_max":9.97,"pressure":1036.39,"sea_level":1038.74,"grnd_level":1036.39,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":{"all":0},"wind":{"speed":6.44,"deg":290.004},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-21
+        06:00:00"},{"dt":1545382800,"main":{"temp":9.1,"temp_min":9.1,"temp_max":9.1,"pressure":1035.72,"sea_level":1038.15,"grnd_level":1035.72,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":24},"wind":{"speed":5.88,"deg":321.009},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-21
+        09:00:00"},{"dt":1545393600,"main":{"temp":7.99,"temp_min":7.99,"temp_max":7.99,"pressure":1035.05,"sea_level":1037.49,"grnd_level":1035.05,"humidity":100,"temp_kf":0},"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03n"}],"clouds":{"all":32},"wind":{"speed":2.39,"deg":323.504},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-21
+        12:00:00"},{"dt":1545404400,"main":{"temp":8.16,"temp_min":8.16,"temp_max":8.16,"pressure":1034.05,"sea_level":1036.42,"grnd_level":1034.05,"humidity":100,"temp_kf":0},"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"clouds":{"all":88},"wind":{"speed":1.18,"deg":309.501},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-21
+        15:00:00"},{"dt":1545415200,"main":{"temp":8.99,"temp_min":8.99,"temp_max":8.99,"pressure":1032.23,"sea_level":1034.6,"grnd_level":1032.23,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"clouds":{"all":92},"wind":{"speed":1.97,"deg":299.5},"rain":{"3h":0.02},"sys":{"pod":"n"},"dt_txt":"2018-12-21
+        18:00:00"},{"dt":1545426000,"main":{"temp":8.04,"temp_min":8.04,"temp_max":8.04,"pressure":1030.84,"sea_level":1033.07,"grnd_level":1030.84,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"clouds":{"all":80},"wind":{"speed":2.81,"deg":355.001},"rain":{"3h":0.18},"sys":{"pod":"n"},"dt_txt":"2018-12-21
+        21:00:00"},{"dt":1545436800,"main":{"temp":8.31,"temp_min":8.31,"temp_max":8.31,"pressure":1031.81,"sea_level":1033.99,"grnd_level":1031.81,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":88},"wind":{"speed":7.1,"deg":4.00012},"rain":{"3h":0.22},"sys":{"pod":"d"},"dt_txt":"2018-12-22
+        00:00:00"},{"dt":1545447600,"main":{"temp":8.56,"temp_min":8.56,"temp_max":8.56,"pressure":1030.84,"sea_level":1033.13,"grnd_level":1030.84,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":88},"wind":{"speed":4.46,"deg":8.50024},"rain":{"3h":0.83},"sys":{"pod":"d"},"dt_txt":"2018-12-22
+        03:00:00"},{"dt":1545458400,"main":{"temp":8.87,"temp_min":8.87,"temp_max":8.87,"pressure":1031.26,"sea_level":1033.66,"grnd_level":1031.26,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":8},"wind":{"speed":5.57,"deg":16.0005},"rain":{"3h":0.02},"sys":{"pod":"d"},"dt_txt":"2018-12-22
+        06:00:00"},{"dt":1545469200,"main":{"temp":9.09,"temp_min":9.09,"temp_max":9.09,"pressure":1033.04,"sea_level":1035.55,"grnd_level":1033.04,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":6.11,"deg":35.5002},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-22
+        09:00:00"},{"dt":1545480000,"main":{"temp":9.38,"temp_min":9.38,"temp_max":9.38,"pressure":1033.88,"sea_level":1036.28,"grnd_level":1033.88,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":20},"wind":{"speed":5.45,"deg":54.5021},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-22
+        12:00:00"},{"dt":1545490800,"main":{"temp":9.54,"temp_min":9.54,"temp_max":9.54,"pressure":1032.77,"sea_level":1035.34,"grnd_level":1032.77,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":20},"wind":{"speed":4.41,"deg":70.5021},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-22
+        15:00:00"},{"dt":1545501600,"main":{"temp":10.15,"temp_min":10.15,"temp_max":10.15,"pressure":1030.86,"sea_level":1033.38,"grnd_level":1030.86,"humidity":100,"temp_kf":0},"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"clouds":{"all":88},"wind":{"speed":4.53,"deg":105.009},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-22
+        18:00:00"},{"dt":1545512400,"main":{"temp":11.12,"temp_min":11.12,"temp_max":11.12,"pressure":1028.98,"sea_level":1031.55,"grnd_level":1028.98,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"clouds":{"all":92},"wind":{"speed":6.31,"deg":148.507},"rain":{"3h":0.02},"sys":{"pod":"n"},"dt_txt":"2018-12-22
+        21:00:00"},{"dt":1545523200,"main":{"temp":11.98,"temp_min":11.98,"temp_max":11.98,"pressure":1026.41,"sea_level":1028.91,"grnd_level":1026.41,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":92},"wind":{"speed":8.03,"deg":160.001},"rain":{"3h":0.12},"sys":{"pod":"d"},"dt_txt":"2018-12-23
+        00:00:00"},{"dt":1545534000,"main":{"temp":12.36,"temp_min":12.36,"temp_max":12.36,"pressure":1021.82,"sea_level":1024.05,"grnd_level":1021.82,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":92},"wind":{"speed":7.32,"deg":165},"rain":{"3h":2.02},"sys":{"pod":"d"},"dt_txt":"2018-12-23
+        03:00:00"},{"dt":1545544800,"main":{"temp":12.73,"temp_min":12.73,"temp_max":12.73,"pressure":1016.01,"sea_level":1018.3,"grnd_level":1016.01,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"clouds":{"all":92},"wind":{"speed":6.34,"deg":159.508},"rain":{"3h":2.11},"sys":{"pod":"d"},"dt_txt":"2018-12-23
+        06:00:00"},{"dt":1545555600,"main":{"temp":11.91,"temp_min":11.91,"temp_max":11.91,"pressure":1014.64,"sea_level":1016.9,"grnd_level":1014.64,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"clouds":{"all":92},"wind":{"speed":9.67,"deg":296.501},"rain":{"3h":0.58},"sys":{"pod":"n"},"dt_txt":"2018-12-23
+        09:00:00"},{"dt":1545566400,"main":{"temp":9.19,"temp_min":9.19,"temp_max":9.19,"pressure":1017.55,"sea_level":1019.87,"grnd_level":1017.55,"humidity":100,"temp_kf":0},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10n"}],"clouds":{"all":64},"wind":{"speed":12.12,"deg":301.502},"rain":{"3h":0.22},"sys":{"pod":"n"},"dt_txt":"2018-12-23
+        12:00:00"},{"dt":1545577200,"main":{"temp":8.17,"temp_min":8.17,"temp_max":8.17,"pressure":1019.13,"sea_level":1021.25,"grnd_level":1019.13,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"02n"}],"clouds":{"all":8},"wind":{"speed":10.66,"deg":316.001},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-23
+        15:00:00"},{"dt":1545588000,"main":{"temp":7.65,"temp_min":7.65,"temp_max":7.65,"pressure":1020.83,"sea_level":1023.2,"grnd_level":1020.83,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":20},"wind":{"speed":11.31,"deg":319.502},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-23
+        18:00:00"},{"dt":1545598800,"main":{"temp":6.35,"temp_min":6.35,"temp_max":6.35,"pressure":1024.17,"sea_level":1026.54,"grnd_level":1024.17,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":12.41,"deg":307.504},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-23
+        21:00:00"},{"dt":1545609600,"main":{"temp":6.19,"temp_min":6.19,"temp_max":6.19,"pressure":1026.88,"sea_level":1029.12,"grnd_level":1026.88,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"clouds":{"all":20},"wind":{"speed":11.21,"deg":302.511},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-24
+        00:00:00"},{"dt":1545620400,"main":{"temp":6.41,"temp_min":6.41,"temp_max":6.41,"pressure":1027.46,"sea_level":1029.83,"grnd_level":1027.46,"humidity":100,"temp_kf":0},"weather":[{"id":802,"main":"Clouds","description":"scattered
+        clouds","icon":"03d"}],"clouds":{"all":44},"wind":{"speed":11.86,"deg":302.503},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-24
+        03:00:00"},{"dt":1545631200,"main":{"temp":6.04,"temp_min":6.04,"temp_max":6.04,"pressure":1029.33,"sea_level":1031.63,"grnd_level":1029.33,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02d"}],"clouds":{"all":20},"wind":{"speed":12.56,"deg":302.002},"rain":{},"sys":{"pod":"d"},"dt_txt":"2018-12-24
+        06:00:00"},{"dt":1545642000,"main":{"temp":5.02,"temp_min":5.02,"temp_max":5.02,"pressure":1032.23,"sea_level":1034.51,"grnd_level":1032.23,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"02n"}],"clouds":{"all":8},"wind":{"speed":11.81,"deg":304.001},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
+        09:00:00"},{"dt":1545652800,"main":{"temp":4.32,"temp_min":4.32,"temp_max":4.32,"pressure":1034.38,"sea_level":1036.67,"grnd_level":1034.38,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":12},"wind":{"speed":9.81,"deg":308.004},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
+        12:00:00"},{"dt":1545663600,"main":{"temp":4,"temp_min":4,"temp_max":4,"pressure":1035.22,"sea_level":1037.64,"grnd_level":1035.22,"humidity":100,"temp_kf":0},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"clouds":{"all":24},"wind":{"speed":8.26,"deg":306.504},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
+        15:00:00"},{"dt":1545674400,"main":{"temp":3.88,"temp_min":3.88,"temp_max":3.88,"pressure":1035.59,"sea_level":1038.02,"grnd_level":1035.59,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":7.13,"deg":302.003},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
+        18:00:00"},{"dt":1545685200,"main":{"temp":3.92,"temp_min":3.92,"temp_max":3.92,"pressure":1036.69,"sea_level":1039.1,"grnd_level":1036.69,"humidity":100,"temp_kf":0},"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"clouds":{"all":0},"wind":{"speed":6.82,"deg":297.501},"rain":{},"sys":{"pod":"n"},"dt_txt":"2018-12-24
+        21:00:00"}],"city":{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"country":"JP","population":117233}}'
+    http_version: 
+  recorded_at: Thu, 20 Dec 2018 07:27:24 GMT
+- request:
+    method: post
+    uri: https://notify-api.line.me/api/notify
+    body:
+      encoding: US-ASCII
+      string: message=%0A%E6%9C%AC%E6%97%A5%E3%81%8B%E3%82%895%E6%97%A5%E9%96%93%E3%81%AE%E7%AF%84%E5%9B%B2%E3%81%A7%E3%80%81%E4%B8%8B%E8%A8%98%E3%81%AE%E6%99%82%E9%96%93%E5%B8%AF%E3%81%ABJR%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B%E6%81%90%E3%82%8C%E3%81%8C%E3%81%82%E3%82%8A%E3%81%BE%E3%81%99%0A2018-12-24+06%3A00%3A00%0A
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - notify-api.line.me
+      Authorization:
+      - Bearer jxYKtF5C7A0AYWp10m9adqrykZwuQIkQRXQVHm8L3hi
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Dec 2018 07:27:24 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=3
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Imagelimit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '997'
+      X-Ratelimit-Imageremaining:
+      - '50'
+      X-Ratelimit-Reset:
+      - '1545291760'
+    body:
+      encoding: UTF-8
+      string: '{"status":200,"message":"ok"}'
+    http_version: 
+  recorded_at: Thu, 20 Dec 2018 07:27:24 GMT
+recorded_with: VCR 4.0.0

@@ -23,11 +23,11 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Thu, 20 Dec 2018 04:47:35 GMT
+      - Thu, 20 Dec 2018 07:28:01 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '394'
+      - '391'
       Connection:
       - keep-alive
       X-Cache-Key:
@@ -40,8 +40,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"message":"accurate","cod":"200","count":1,"list":[{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"main":{"temp":10,"pressure":1016,"humidity":43,"temp_min":10,"temp_max":10},"dt":1545278400,"wind":{"speed":8.2,"deg":310},"sys":{"country":"JP"},"rain":null,"snow":null,"clouds":{"all":20},"weather":[{"id":801,"main":"Clouds","description":"few
+      string: '{"message":"accurate","cod":"200","count":1,"list":[{"id":2112576,"name":"Ishinomaki","coord":{"lat":38.4167,"lon":141.3},"main":{"temp":7,"pressure":1018,"humidity":48,"temp_min":7,"temp_max":7},"dt":1545289200,"wind":{"speed":4.6,"deg":280},"sys":{"country":"JP"},"rain":null,"snow":null,"clouds":{"all":20},"weather":[{"id":801,"main":"Clouds","description":"few
         clouds","icon":"02d"}]}]}'
     http_version: 
-  recorded_at: Thu, 20 Dec 2018 04:47:35 GMT
+  recorded_at: Thu, 20 Dec 2018 07:28:01 GMT
 recorded_with: VCR 4.0.0
