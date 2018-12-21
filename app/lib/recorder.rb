@@ -16,7 +16,7 @@ class Recorder
       wind_speed: wind_speed
     )
     # 閾値を変更
-    threshold_modify
+    Threshold.threshold_update('ishinomaki')
 
   end
 
@@ -24,14 +24,6 @@ class Recorder
     url = "http://api.openweathermap.org/data/2.5/find?q=#{city_name},jp&units=metric&APPID=#{open_weather_key}"
     request = Request.new(url)
     return request.get["list"][0]
-  end
-
-  def threshold_modify
-    wind_speed = Weather.wind_speed_average(city_name)
-    Threshold.create(
-      wind_speed:wind_speed,
-      city_name:city_name
-    )
   end
 
   def open_weather_key
