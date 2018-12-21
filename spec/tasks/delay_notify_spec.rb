@@ -5,7 +5,7 @@ describe 'rake task csv' do
   before(:all) do
     @rake = Rake::Application.new
     Rake.application = @rake
-    Rake.application.rake_require 'tasks/delay_notify'
+    Rake.application.rake_require 'tasks/delay'
     Rake::Task.define_task(:environment)
   end
 
@@ -13,9 +13,11 @@ describe 'rake task csv' do
     @rake[task].reenable
   end
 
-  describe 'delay_notify:notify' do
-    let(:task) { 'delay_notify:notify' }
+  describe 'delay:notify' do
+    let(:task) { 'delay:notify' }
     it 'is succeed.' do
+      FactoryBot.create(:weather)
+      FactoryBot.create(:threshold)
       expect(@rake[task].invoke).to be_truthy
     end
   end
