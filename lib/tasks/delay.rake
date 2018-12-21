@@ -1,4 +1,4 @@
-namespace :delay_notify do
+namespace :delay do
   desc "しきい値を超えていれば通知する"
   task :notify => :environment do
     noti = Notifycation.new
